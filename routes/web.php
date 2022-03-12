@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShortlyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+/**
+ * run the command: php artisan route:list -v --except-vendor to see why I use 'parameters' or just 
+ * go to the official documentation 'https://laravel.com/docs/9.x/controllers#restful-naming-resource-route-parameters'
+ */
+Route::resource('/', ShortlyController::class)->parameters([ '' => 'shortURL' ]);
