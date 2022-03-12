@@ -2,4 +2,4 @@
 
 # Short links
 
-Just install and taste the application to see how it works.
+Just install and test the application to see how it works.
