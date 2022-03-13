@@ -14,11 +14,3 @@ const mix = require("laravel-mix");
 mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [require("tailwindcss")])
     .vue({ version: 3 });
-
-if (process.env.MIX_ENV !== "production") {
-    mix.browserSync({
-        host: "shortly.test",
-        proxy: "shortly.test",
-        open: false,
-    });
-}
